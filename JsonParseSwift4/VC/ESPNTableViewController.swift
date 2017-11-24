@@ -15,8 +15,6 @@ class ESPNTableViewController: UITableViewController {
     
     //MARK: - Variables locales
     var arrayModel : [ModelGeneralData] = []
-    var imagenSeleccionada : UIImage?
-    var diccionarioImagenes = [String: UIImage?]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +66,16 @@ class ESPNTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 310
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let webVC = self.storyboard?.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        let selectInd = tableView.indexPathForSelectedRow?.row
+        let objInd = arrayModel[selectInd!]
+        webVC.urlWeb = objInd.articles.url
+        present(webVC, animated: true, completion: nil)
+        
     }
     
 

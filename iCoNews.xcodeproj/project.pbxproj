@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		410036AB1FC854C6008DA73B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410036AA1FC854C6008DA73B /* AppDelegate.swift */; };
-		410036AD1FC854C6008DA73B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410036AC1FC854C6008DA73B /* ViewController.swift */; };
 		410036B01FC854C6008DA73B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410036AE1FC854C6008DA73B /* Main.storyboard */; };
 		410036B21FC854C6008DA73B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 410036B11FC854C6008DA73B /* Assets.xcassets */; };
 		410036B51FC854C6008DA73B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410036B31FC854C6008DA73B /* LaunchScreen.storyboard */; };
@@ -36,13 +35,13 @@
 		41C46CA71FC87D5E00920F4A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C46CA81FC87D5E00920F4A /* Kingfisher.framework */; };
 		41C46CAB1FC88F5100920F4A /* TemplateCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C46CA91FC88F5000920F4A /* TemplateCustomCell.xib */; };
 		41C46CAC1FC88F5100920F4A /* TemplateCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C46CAA1FC88F5100920F4A /* TemplateCustomCell.swift */; };
+		41C46CAE1FC8BB6900920F4A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C46CAD1FC8BB6900920F4A /* WebViewController.swift */; };
 		97BFC31AA01369EF417FE7BE /* Pods_iCoNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07C587A29B449DA36F9CD13 /* Pods_iCoNews.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		410036A71FC854C6008DA73B /* iCoNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCoNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		410036AA1FC854C6008DA73B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		410036AC1FC854C6008DA73B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		410036AF1FC854C6008DA73B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		410036B11FC854C6008DA73B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		410036B41FC854C6008DA73B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		41C46CA81FC87D5E00920F4A /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C46CA91FC88F5000920F4A /* TemplateCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemplateCustomCell.xib; sourceTree = "<group>"; };
 		41C46CAA1FC88F5100920F4A /* TemplateCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateCustomCell.swift; sourceTree = "<group>"; };
+		41C46CAD1FC8BB6900920F4A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A75537D25818647F4CC64260 /* Pods-iCoNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCoNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iCoNews/Pods-iCoNews.debug.xcconfig"; sourceTree = "<group>"; };
 		D07C587A29B449DA36F9CD13 /* Pods_iCoNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCoNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D288A8451410CC7319B73D1D /* Pods-iCoNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCoNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-iCoNews/Pods-iCoNews.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,19 +123,9 @@
 				410036CC1FC864F5008DA73B /* OBJC-TAB */,
 				410036BC1FC8649E008DA73B /* ISHomeViewController.swift */,
 				410036E11FC86B47008DA73B /* API */,
-				410036DB1FC86727008DA73B /* LEQUIPETableViewController.swift */,
-				41C46CAA1FC88F5100920F4A /* TemplateCustomCell.swift */,
-				41C46CA91FC88F5000920F4A /* TemplateCustomCell.xib */,
-				410036DD1FC86730008DA73B /* TALKSPORTTableViewController.swift */,
-				410036D71FC8670D008DA73B /* MARCATableViewController.swift */,
-				410036D91FC8671C008DA73B /* FOOTBALITALIATableViewController.swift */,
-				410036D51FC86702008DA73B /* BLEACHERREPORTTableViewController.swift */,
-				410036D31FC866F3008DA73B /* NHLNEWSTableViewController.swift */,
-				410036D11FC866E6008DA73B /* NFLNEWSTableViewController.swift */,
-				410036CD1FC86693008DA73B /* ESPNTableViewController.swift */,
-				410036CF1FC866D9008DA73B /* FOXSPORTSTableViewController.swift */,
+				41C46CAF1FC8BC0C00920F4A /* VC */,
+				41C46CB01FC8BC1D00920F4A /* XIB_TEMPLATE */,
 				410036AA1FC854C6008DA73B /* AppDelegate.swift */,
-				410036AC1FC854C6008DA73B /* ViewController.swift */,
 				410036AE1FC854C6008DA73B /* Main.storyboard */,
 				410036B11FC854C6008DA73B /* Assets.xcassets */,
 				410036B31FC854C6008DA73B /* LaunchScreen.storyboard */,
@@ -169,6 +159,32 @@
 				410036E41FC86D84008DA73B /* APIPARSE.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		41C46CAF1FC8BC0C00920F4A /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				41C46CAD1FC8BB6900920F4A /* WebViewController.swift */,
+				410036DB1FC86727008DA73B /* LEQUIPETableViewController.swift */,
+				410036DD1FC86730008DA73B /* TALKSPORTTableViewController.swift */,
+				410036D71FC8670D008DA73B /* MARCATableViewController.swift */,
+				410036D91FC8671C008DA73B /* FOOTBALITALIATableViewController.swift */,
+				410036D51FC86702008DA73B /* BLEACHERREPORTTableViewController.swift */,
+				410036D31FC866F3008DA73B /* NHLNEWSTableViewController.swift */,
+				410036D11FC866E6008DA73B /* NFLNEWSTableViewController.swift */,
+				410036CD1FC86693008DA73B /* ESPNTableViewController.swift */,
+				410036CF1FC866D9008DA73B /* FOXSPORTSTableViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		41C46CB01FC8BC1D00920F4A /* XIB_TEMPLATE */ = {
+			isa = PBXGroup;
+			children = (
+				41C46CAA1FC88F5100920F4A /* TemplateCustomCell.swift */,
+				41C46CA91FC88F5000920F4A /* TemplateCustomCell.xib */,
+			);
+			path = XIB_TEMPLATE;
 			sourceTree = "<group>";
 		};
 		47798F18AF6795199CDDAA48 /* Frameworks */ = {
@@ -337,7 +353,6 @@
 				410036D21FC866E6008DA73B /* NFLNEWSTableViewController.swift in Sources */,
 				410036DA1FC8671C008DA73B /* FOOTBALITALIATableViewController.swift in Sources */,
 				410036E31FC86B60008DA73B /* APIMODELDATA.swift in Sources */,
-				410036AD1FC854C6008DA73B /* ViewController.swift in Sources */,
 				410036BD1FC8649E008DA73B /* ISHomeViewController.swift in Sources */,
 				410036CA1FC864E6008DA73B /* CarbonTabSwipeSegmentedControl.m in Sources */,
 				410036AB1FC854C6008DA73B /* AppDelegate.swift in Sources */,
@@ -348,6 +363,7 @@
 				410036C81FC864E6008DA73B /* CarbonSwipeRefresh.m in Sources */,
 				410036C91FC864E6008DA73B /* CarbonTabSwipeScrollView.m in Sources */,
 				410036D81FC8670D008DA73B /* MARCATableViewController.swift in Sources */,
+				41C46CAE1FC8BB6900920F4A /* WebViewController.swift in Sources */,
 				410036E01FC86977008DA73B /* APIUTILS.swift in Sources */,
 				410036DC1FC86727008DA73B /* LEQUIPETableViewController.swift in Sources */,
 				410036D61FC86702008DA73B /* BLEACHERREPORTTableViewController.swift in Sources */,
