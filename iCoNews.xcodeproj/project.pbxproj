@@ -29,6 +29,11 @@
 		410036E01FC86977008DA73B /* APIUTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410036DF1FC86976008DA73B /* APIUTILS.swift */; };
 		410036E31FC86B60008DA73B /* APIMODELDATA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410036E21FC86B60008DA73B /* APIMODELDATA.swift */; };
 		410036E51FC86D84008DA73B /* APIPARSE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410036E41FC86D84008DA73B /* APIPARSE.swift */; };
+		41C46C9F1FC872A200920F4A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C46CA31FC872A200920F4A /* Alamofire.framework */; };
+		41C46CA01FC872A200920F4A /* APESuperHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C46CA41FC872A200920F4A /* APESuperHUD.framework */; };
+		41C46CA11FC872A200920F4A /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C46CA51FC872A200920F4A /* PromiseKit.framework */; };
+		41C46CA21FC872A200920F4A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C46CA61FC872A200920F4A /* SwiftyJSON.framework */; };
+		41C46CA71FC87D5E00920F4A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C46CA81FC87D5E00920F4A /* Kingfisher.framework */; };
 		97BFC31AA01369EF417FE7BE /* Pods_iCoNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07C587A29B449DA36F9CD13 /* Pods_iCoNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +68,11 @@
 		410036DF1FC86976008DA73B /* APIUTILS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUTILS.swift; sourceTree = "<group>"; };
 		410036E21FC86B60008DA73B /* APIMODELDATA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMODELDATA.swift; sourceTree = "<group>"; };
 		410036E41FC86D84008DA73B /* APIPARSE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPARSE.swift; sourceTree = "<group>"; };
+		41C46CA31FC872A200920F4A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41C46CA41FC872A200920F4A /* APESuperHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APESuperHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41C46CA51FC872A200920F4A /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41C46CA61FC872A200920F4A /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41C46CA81FC87D5E00920F4A /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75537D25818647F4CC64260 /* Pods-iCoNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCoNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iCoNews/Pods-iCoNews.debug.xcconfig"; sourceTree = "<group>"; };
 		D07C587A29B449DA36F9CD13 /* Pods_iCoNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCoNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D288A8451410CC7319B73D1D /* Pods-iCoNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCoNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-iCoNews/Pods-iCoNews.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +83,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C46CA71FC87D5E00920F4A /* Kingfisher.framework in Frameworks */,
+				41C46C9F1FC872A200920F4A /* Alamofire.framework in Frameworks */,
+				41C46CA01FC872A200920F4A /* APESuperHUD.framework in Frameworks */,
+				41C46CA11FC872A200920F4A /* PromiseKit.framework in Frameworks */,
+				41C46CA21FC872A200920F4A /* SwiftyJSON.framework in Frameworks */,
 				97BFC31AA01369EF417FE7BE /* Pods_iCoNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +168,11 @@
 		47798F18AF6795199CDDAA48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41C46CA81FC87D5E00920F4A /* Kingfisher.framework */,
+				41C46CA31FC872A200920F4A /* Alamofire.framework */,
+				41C46CA41FC872A200920F4A /* APESuperHUD.framework */,
+				41C46CA51FC872A200920F4A /* PromiseKit.framework */,
+				41C46CA61FC872A200920F4A /* SwiftyJSON.framework */,
 				D07C587A29B449DA36F9CD13 /* Pods_iCoNews.framework */,
 			);
 			name = Frameworks;
@@ -281,13 +301,17 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-iCoNews/Pods-iCoNews-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/APESuperHUD/APESuperHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APESuperHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

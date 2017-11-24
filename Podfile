@@ -8,5 +8,8 @@ target 'iCoNews' do
   # Pods for iCoNews
   pod 'APESuperHUD', :git => 'https://github.com/apegroup/APESuperHUD.git'
   pod 'PromiseKit/Alamofire'
+  pod 'SwiftyJSON'
+  pod 'Kingfisher'
+
 
 end

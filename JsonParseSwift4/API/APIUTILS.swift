@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 let CONSTANTES = Constantes()
 
@@ -37,5 +38,21 @@ struct LLamadas {
     let BASE_PARAMETR = "&apiKey="
     
     let BASE_API_URL = "https://newsapi.org/v2/top-headlines?sources="
+}
+
+//MARK: - NULL TO STRING
+public func dimeString(_ j : JSON, nombre : String) -> String{
+    if let stringResult = j[nombre].string{
+        return stringResult
+    }else{
+        return ""
+    }
+}
+
+func muestraAlertVC(_ titleData : String, messageData : String) -> UIAlertController{
+    let alert = UIAlertController(title: titleData, message: messageData, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+    return alert
 }
 

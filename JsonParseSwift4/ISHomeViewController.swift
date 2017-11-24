@@ -32,6 +32,12 @@ class ISHomeViewController: UIViewController {
         customTabSwipeNavigation.setIndicatorColor(customColor)
         customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 0)
         customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 1)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 3)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 4)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 5)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 6)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 7)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 8)
         customTabSwipeNavigation.setNormalColor(customColor.withAlphaComponent(0.6))
         customTabSwipeNavigation.setSelectedColor(customColor, font: UIFont.boldSystemFont(ofSize: 14))
     }
@@ -50,7 +56,7 @@ extension ISHomeViewController : CarbonTabSwipeNavigationDelegate{
         case 1:
             return self.storyboard?.instantiateViewController(withIdentifier: "FOXSPORTSTableViewController") as! FOXSPORTSTableViewController
         case 2:
-            return self.storyboard?.instantiateViewController(withIdentifier: "NFLNEWSTableViewControllerg") as! NFLNEWSTableViewController
+            return self.storyboard?.instantiateViewController(withIdentifier: "NFLNEWSTableViewController") as! NFLNEWSTableViewController
         case 3:
             return self.storyboard?.instantiateViewController(withIdentifier: "NHLNEWSTableViewController") as! NHLNEWSTableViewController
         case 4:
