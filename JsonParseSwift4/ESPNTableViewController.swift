@@ -15,12 +15,16 @@ class ESPNTableViewController: UITableViewController {
     
     //MARK: - Variables locales
     var arrayModel : [ModelGeneralData] = []
+    var imagenSeleccionada : UIImage?
+    var diccionarioImagenes = [String: UIImage?]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //LLAMADA A DATOS
         llamadaESPN()
+        //TODO: - Registro de celda
+        tableView.register(UINib(nibName: "TemplateCustomCell", bundle: nil), forCellReuseIdentifier: "TemplateCustomCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,13 +47,27 @@ class ESPNTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let customOfertasCell = tableView.dequeueReusableCell(withIdentifier: "TemplateCustomCell", for: indexPath) as! TemplateCustomCell
 
         let model = arrayModel[indexPath.row]
         
-        cell.textLabel?.text = model.articles.author
+        customOfertasCell.myNombreOferta.text = model.articles.title
+        customOfertasCell.myFechaOferta.text = model.articles.publishedAt
+        customOfertasCell.myInformacionOferta.text = model.articles.descripcion
+        customOfertasCell.myImporteOferta.text = model.articles.author
+        
+        //Recuperar en background la imagen
+        customOfertasCell.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: model.articles.urlToImage)!),
+                                                                                          placeholder: #imageLiteral(resourceName: "placeholder"),
+                                                                                          options: [.transition(ImageTransition.fade(1))],
+                                                                                          progressBlock: nil,
+                                                                                          completionHandler: nil)
 
-        return cell
+        return customOfertasCell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 310
     }
     
 
