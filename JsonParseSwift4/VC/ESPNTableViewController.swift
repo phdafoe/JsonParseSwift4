@@ -14,7 +14,7 @@ import APESuperHUD
 class ESPNTableViewController: UITableViewController {
     
     //MARK: - Variables locales
-    var arrayModel : [ModelGeneralData] = []
+    var arrayModelESPN : [ModelGeneralData] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class ESPNTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return arrayModel.count
+        return arrayModelESPN.count
     }
 
     
@@ -47,15 +47,16 @@ class ESPNTableViewController: UITableViewController {
         
         let customOfertasCell = tableView.dequeueReusableCell(withIdentifier: "TemplateCustomCell", for: indexPath) as! TemplateCustomCell
 
-        let model = arrayModel[indexPath.row]
+        let model = arrayModelESPN[indexPath.row]
         
+
         customOfertasCell.myNombreOferta.text = model.articles.title
         customOfertasCell.myFechaOferta.text = model.articles.publishedAt
         customOfertasCell.myInformacionOferta.text = model.articles.descripcion
         customOfertasCell.myImporteOferta.text = model.articles.author
         
         //Recuperar en background la imagen
-        customOfertasCell.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: model.articles.urlToImage)!),
+        customOfertasCell.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: model.articles.urlToImage!)!),
                                                                                           placeholder: #imageLiteral(resourceName: "placeholder"),
                                                                                           options: [.transition(ImageTransition.fade(1))],
                                                                                           progressBlock: nil,
@@ -72,7 +73,7 @@ class ESPNTableViewController: UITableViewController {
         
         let webVC = self.storyboard?.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
         let selectInd = tableView.indexPathForSelectedRow?.row
-        let objInd = arrayModel[selectInd!]
+        let objInd = arrayModelESPN[selectInd!]
         webVC.urlWeb = objInd.articles.url
         present(webVC, animated: true, completion: nil)
         
@@ -90,7 +91,7 @@ class ESPNTableViewController: UITableViewController {
         firstly{
             return when(resolved: datosModel.getDatosFromWeb(idFuente))
             }.then{_ in
-                self.arrayModel = datosModel.setParseFromWeb()
+                self.arrayModelESPN = datosModel.setParseFromWeb()
             }.then{_ in
                 self.tableView.reloadData()
             }.then{_ in

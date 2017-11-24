@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import PromiseKit
+import Kingfisher
+import APESuperHUD
 
 class MARCATableViewController: UITableViewController {
+    
+    //MARK: - Variables locales
+    var arrayModelMARCA : [ModelGeneralData] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //LLAMADA A DATOS
+        llamadaMARCA()
+        //TODO: - Registro de celda
+        tableView.register(UINib(nibName: "TemplateCustomCell", bundle: nil), forCellReuseIdentifier: "TemplateCustomCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,70 +31,76 @@ class MARCATableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return arrayModelMARCA.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        
+        let customOfertasCell = tableView.dequeueReusableCell(withIdentifier: "TemplateCustomCell", for: indexPath) as! TemplateCustomCell
+        
+        let model = arrayModelMARCA[indexPath.row]
+        
+        customOfertasCell.myNombreOferta.text = model.articles.title
+        customOfertasCell.myFechaOferta.text = model.articles.publishedAt
+        customOfertasCell.myInformacionOferta.text = model.articles.descripcion
+        customOfertasCell.myImporteOferta.text = model.articles.author
+        
+        //Recuperar en background la imagen
+        if let imageDes = model.articles.urlToImage, let urlDes = URL(string: imageDes){
+        customOfertasCell.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: urlDes),
+                                                     placeholder: #imageLiteral(resourceName: "placeholder"),
+                                                     options: [.transition(ImageTransition.fade(1))],
+                                                     progressBlock: nil,
+                                                     completionHandler: nil)
+        }
+        
+        return customOfertasCell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 310
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let webVC = self.storyboard?.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        let selectInd = tableView.indexPathForSelectedRow?.row
+        let objInd = arrayModelMARCA[selectInd!]
+        webVC.urlWeb = objInd.articles.url
+        present(webVC, animated: true, completion: nil)
+        
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    //MARK: - UTILS
+    func llamadaMARCA(){
+        
+        let datosModelMARCA = ParserGeneral()
+        let idFuente = CONSTANTES.LLAMADAS.BASE_MARCA
+        
+        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
+        
+        firstly{
+            return when(resolved: datosModelMARCA.getDatosFromWeb(idFuente))
+            }.then{_ in
+                self.arrayModelMARCA = datosModelMARCA.setParseFromWeb()
+            }.then{_ in
+                self.tableView.reloadData()
+            }.then{_ in
+                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+            }.catch{error in
+                self.present(muestraAlertVC("Lo sentimos",
+                                            messageData: "Algo salió mal"),
+                             animated: true,
+                             completion: nil)
+        }
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -17,7 +17,7 @@ class ISHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        items = ["ESPN", "Fox Sports", "NFL News", "NHL News", "Bleacher Report", "Marca", "Football Italia", "l'equipe", "TalkSport"]
+        items = ["ESPN", "NFL News", "NHL News", "Bleacher Report", "Marca", "Football Italia", "l'equipe", "TalkSport"]
         customTabSwipeNavigation = CarbonTabSwipeNavigation(items: (items as! [Any]), delegate: self)
         customTabSwipeNavigation.insert(intoRootViewController: self)
         style()
@@ -30,14 +30,13 @@ class ISHomeViewController: UIViewController {
         let customColor = CONSTANTES.COLORES.GRIS_NAV_TAB
         customTabSwipeNavigation.toolbar.isTranslucent = false
         customTabSwipeNavigation.setIndicatorColor(customColor)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 0)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 1)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 3)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 4)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 5)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 6)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 7)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 8)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 0)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 1)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 3)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 4)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 5)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 6)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 7)
         customTabSwipeNavigation.setNormalColor(customColor.withAlphaComponent(0.6))
         customTabSwipeNavigation.setSelectedColor(customColor, font: UIFont.boldSystemFont(ofSize: 14))
     }
@@ -54,18 +53,16 @@ extension ISHomeViewController : CarbonTabSwipeNavigationDelegate{
         case 0:
             return self.storyboard?.instantiateViewController(withIdentifier: "ESPNTableViewController") as! ESPNTableViewController
         case 1:
-            return self.storyboard?.instantiateViewController(withIdentifier: "FOXSPORTSTableViewController") as! FOXSPORTSTableViewController
-        case 2:
             return self.storyboard?.instantiateViewController(withIdentifier: "NFLNEWSTableViewController") as! NFLNEWSTableViewController
-        case 3:
+        case 2:
             return self.storyboard?.instantiateViewController(withIdentifier: "NHLNEWSTableViewController") as! NHLNEWSTableViewController
-        case 4:
+        case 3:
             return self.storyboard?.instantiateViewController(withIdentifier: "BLEACHERREPORTTableViewController") as! BLEACHERREPORTTableViewController
-        case 5:
+        case 4:
             return self.storyboard?.instantiateViewController(withIdentifier: "MARCATableViewController") as! MARCATableViewController
+        case 5:
+             return self.storyboard?.instantiateViewController(withIdentifier: "FOOTBALITALIATableViewController") as! FOOTBALITALIATableViewController
         case 6:
-            return self.storyboard?.instantiateViewController(withIdentifier: "FOOTBALITALIATableViewController") as! FOOTBALITALIATableViewController
-        case 7:
             return self.storyboard?.instantiateViewController(withIdentifier: "LEQUIPETableViewController") as! LEQUIPETableViewController
         default:
             return self.storyboard?.instantiateViewController(withIdentifier: "TALKSPORTTableViewController") as! TALKSPORTTableViewController

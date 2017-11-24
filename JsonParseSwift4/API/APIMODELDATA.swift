@@ -23,13 +23,13 @@ class ModelGeneralData : NSObject {
 
 class Articles : NSObject {
     
-    let source : Source
-    let author : String
-    let title : String
-    let descripcion : String
-    let url : String
-    let urlToImage : String
-    let publishedAt : String
+    let source : Source?
+    let author : String?
+    let title : String?
+    let descripcion : String?
+    let url : String?
+    let urlToImage : String?
+    let publishedAt : String?
     
     init(pSource : Source, pAuthor : String, pTitle : String, pDescripcion : String, pUrl : String, pUrlToImage : String, pPubishedAt : String) {
         
