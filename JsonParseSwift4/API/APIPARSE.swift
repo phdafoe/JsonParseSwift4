@@ -40,7 +40,9 @@ class ParserGeneral: NSObject {
                                         pDescripcion: dimeString(c_obj.1, nombre: "description"),
                                         pUrl: dimeString(c_obj.1, nombre: "url"),
                                         pUrlToImage: dimeString(c_obj.1, nombre: "urlToImage"),
-                                        pPubishedAt: dimeString(c_obj.1, nombre: "pubishedAt"))
+                                        pPubishedAt: dimeString(c_obj.1, nombre: "publishedAt"))
+            
+            
             
             
             let modelData = ModelGeneralData(pArticles: articlesArray)

@@ -30,13 +30,13 @@ class ISHomeViewController: UIViewController {
         let customColor = CONSTANTES.COLORES.GRIS_NAV_TAB
         customTabSwipeNavigation.toolbar.isTranslucent = false
         customTabSwipeNavigation.setIndicatorColor(customColor)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 0)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 1)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 3)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 4)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 5)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 6)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width, forSegmentAt: 7)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 3, forSegmentAt: 0)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 3, forSegmentAt: 1)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 3, forSegmentAt: 3)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 3, forSegmentAt: 4)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 3, forSegmentAt: 5)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 3, forSegmentAt: 6)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 3, forSegmentAt: 7)
         customTabSwipeNavigation.setNormalColor(customColor.withAlphaComponent(0.6))
         customTabSwipeNavigation.setSelectedColor(customColor, font: UIFont.boldSystemFont(ofSize: 14))
     }

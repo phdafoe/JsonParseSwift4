@@ -56,3 +56,12 @@ func muestraAlertVC(_ titleData : String, messageData : String) -> UIAlertContro
     return alert
 }
 
+public func dameFecha(_ fecha : String) -> Date?{
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEE, dd MMM"
+    dateFormatter.locale = Locale(identifier: "es_ES")
+    return dateFormatter.date(from: fecha)
+}
+
+
+
