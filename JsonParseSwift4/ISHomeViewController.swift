@@ -14,6 +14,10 @@ class ISHomeViewController: UIViewController {
     var items = NSArray()
     var customTabSwipeNavigation : CarbonTabSwipeNavigation!
     
+    //MARK: - IBOUTLET
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +25,14 @@ class ISHomeViewController: UIViewController {
         customTabSwipeNavigation = CarbonTabSwipeNavigation(items: (items as! [Any]), delegate: self)
         customTabSwipeNavigation.insert(intoRootViewController: self)
         style()
+        
+        //TODO: - Gestion del menu superior Izq.
+        if revealViewController() != nil{
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            revealViewController().rightViewRevealWidth = 150
+            //view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
         // Do any additional setup after loading the view.
     }

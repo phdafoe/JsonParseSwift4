@@ -26,6 +26,7 @@
 		410036E01FC86977008DA73B /* APIUTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410036DF1FC86976008DA73B /* APIUTILS.swift */; };
 		410036E31FC86B60008DA73B /* APIMODELDATA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410036E21FC86B60008DA73B /* APIMODELDATA.swift */; };
 		410036E51FC86D84008DA73B /* APIPARSE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410036E41FC86D84008DA73B /* APIPARSE.swift */; };
+		415771F71FCADE2600E44755 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415771F61FCADE2600E44755 /* SWRevealViewController.m */; };
 		41C46C9F1FC872A200920F4A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C46CA31FC872A200920F4A /* Alamofire.framework */; };
 		41C46CA01FC872A200920F4A /* APESuperHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C46CA41FC872A200920F4A /* APESuperHUD.framework */; };
 		41C46CA11FC872A200920F4A /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C46CA51FC872A200920F4A /* PromiseKit.framework */; };
@@ -66,6 +67,8 @@
 		410036DF1FC86976008DA73B /* APIUTILS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUTILS.swift; sourceTree = "<group>"; };
 		410036E21FC86B60008DA73B /* APIMODELDATA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMODELDATA.swift; sourceTree = "<group>"; };
 		410036E41FC86D84008DA73B /* APIPARSE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPARSE.swift; sourceTree = "<group>"; };
+		415771F51FCADE2600E44755 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		415771F61FCADE2600E44755 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		41C46CA31FC872A200920F4A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C46CA41FC872A200920F4A /* APESuperHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APESuperHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C46CA51FC872A200920F4A /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +138,8 @@
 		410036CC1FC864F5008DA73B /* OBJC-TAB */ = {
 			isa = PBXGroup;
 			children = (
+				415771F51FCADE2600E44755 /* SWRevealViewController.h */,
+				415771F61FCADE2600E44755 /* SWRevealViewController.m */,
 				410036BE1FC864E4008DA73B /* iCoNews-Bridging-Header.h */,
 				410036C41FC864E6008DA73B /* CarbonKit.h */,
 				410036C31FC864E6008DA73B /* CarbonSwipeRefresh.h */,
@@ -352,6 +357,7 @@
 				410036BD1FC8649E008DA73B /* ISHomeViewController.swift in Sources */,
 				410036CA1FC864E6008DA73B /* CarbonTabSwipeSegmentedControl.m in Sources */,
 				410036AB1FC854C6008DA73B /* AppDelegate.swift in Sources */,
+				415771F71FCADE2600E44755 /* SWRevealViewController.m in Sources */,
 				410036E51FC86D84008DA73B /* APIPARSE.swift in Sources */,
 				410036DE1FC86730008DA73B /* TALKSPORTTableViewController.swift in Sources */,
 				410036CE1FC86693008DA73B /* ESPNTableViewController.swift in Sources */,
