@@ -1,15 +1,15 @@
 //
-//  ISHomeViewController.swift
-//  iSaldos
+//  ISHomeTechnologyViewController.swift
+//  iCoNews
 //
-//  Created by Andres on 13/4/17.
+//  Created by Andres on 26/11/17.
 //  Copyright © 2017 icologic. All rights reserved.
 //
 
 import UIKit
 
-class ISHomeViewController: UIViewController {
-    
+class ISHomeTechnologyViewController: UIViewController {
+
     //MARK: - Variables locales
     var items = NSArray()
     var customTabSwipeNavigation : CarbonTabSwipeNavigation!
@@ -21,7 +21,7 @@ class ISHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        items = ["ESPN", "NFL News", "NHL News", "Bleacher Report", "Marca", "Football Italia", "l'equipe", "TalkSport"]
+        items = ["Hacker News", "Engadget", "Cripto Coins News", "Techcrunch"]
         customTabSwipeNavigation = CarbonTabSwipeNavigation(items: (items as! [Any]), delegate: self)
         customTabSwipeNavigation.insert(intoRootViewController: self)
         style()
@@ -46,41 +46,28 @@ class ISHomeViewController: UIViewController {
         customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 3, forSegmentAt: 1)
         customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 3, forSegmentAt: 2)
         customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 3, forSegmentAt: 3)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 3, forSegmentAt: 4)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 3, forSegmentAt: 5)
-        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 3, forSegmentAt: 6)
         customTabSwipeNavigation.setNormalColor(customColor.withAlphaComponent(0.6))
         customTabSwipeNavigation.setSelectedColor(customColor, font: UIFont.boldSystemFont(ofSize: 14))
     }
     
     
-
+    
 }
 
-extension ISHomeViewController : CarbonTabSwipeNavigationDelegate{
+extension ISHomeTechnologyViewController : CarbonTabSwipeNavigationDelegate{
     
     
     func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
         switch index {
         case 0:
-            return self.storyboard?.instantiateViewController(withIdentifier: "ESPNTableViewController") as! ESPNTableViewController
+            return self.storyboard?.instantiateViewController(withIdentifier: "HACKERNEWSTableViewController") as! HACKERNEWSTableViewController
         case 1:
-            return self.storyboard?.instantiateViewController(withIdentifier: "NFLNEWSTableViewController") as! NFLNEWSTableViewController
+            return self.storyboard?.instantiateViewController(withIdentifier: "ENGADGETTableViewController") as! ENGADGETTableViewController
         case 2:
-            return self.storyboard?.instantiateViewController(withIdentifier: "NHLNEWSTableViewController") as! NHLNEWSTableViewController
-        case 3:
-            return self.storyboard?.instantiateViewController(withIdentifier: "BLEACHERREPORTTableViewController") as! BLEACHERREPORTTableViewController
-        case 4:
-            return self.storyboard?.instantiateViewController(withIdentifier: "MARCATableViewController") as! MARCATableViewController
-        case 5:
-             return self.storyboard?.instantiateViewController(withIdentifier: "FOOTBALITALIATableViewController") as! FOOTBALITALIATableViewController
-        case 6:
-            return self.storyboard?.instantiateViewController(withIdentifier: "LEQUIPETableViewController") as! LEQUIPETableViewController
+            return self.storyboard?.instantiateViewController(withIdentifier: "CRYPTOCOINSTableViewController") as! CRYPTOCOINSTableViewController
         default:
-            return self.storyboard?.instantiateViewController(withIdentifier: "TALKSPORTTableViewController") as! TALKSPORTTableViewController
+            return self.storyboard?.instantiateViewController(withIdentifier: "TECHTableViewController") as! TECHTableViewController
         }
     }
     
 }
-
-

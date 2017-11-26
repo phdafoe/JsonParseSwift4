@@ -27,6 +27,14 @@
 		410036E31FC86B60008DA73B /* APIMODELDATA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410036E21FC86B60008DA73B /* APIMODELDATA.swift */; };
 		410036E51FC86D84008DA73B /* APIPARSE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410036E41FC86D84008DA73B /* APIPARSE.swift */; };
 		415771F71FCADE2600E44755 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415771F61FCADE2600E44755 /* SWRevealViewController.m */; };
+		415771F91FCB5A0B00E44755 /* ISHomeMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415771F81FCB5A0B00E44755 /* ISHomeMusicViewController.swift */; };
+		415771FB1FCB5AF300E44755 /* MTVTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415771FA1FCB5AF300E44755 /* MTVTableViewController.swift */; };
+		415771FD1FCB5AFC00E44755 /* MTVUKTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415771FC1FCB5AFC00E44755 /* MTVUKTableViewController.swift */; };
+		415771FF1FCB616700E44755 /* ISHomeTechnologyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415771FE1FCB616700E44755 /* ISHomeTechnologyViewController.swift */; };
+		415772011FCB627B00E44755 /* TECHTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415772001FCB627B00E44755 /* TECHTableViewController.swift */; };
+		415772031FCB629300E44755 /* CRYPTOCOINSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415772021FCB629300E44755 /* CRYPTOCOINSTableViewController.swift */; };
+		415772051FCB62AC00E44755 /* ENGADGETTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415772041FCB62AC00E44755 /* ENGADGETTableViewController.swift */; };
+		415772071FCB62C200E44755 /* HACKERNEWSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415772061FCB62C200E44755 /* HACKERNEWSTableViewController.swift */; };
 		41C46C9F1FC872A200920F4A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C46CA31FC872A200920F4A /* Alamofire.framework */; };
 		41C46CA01FC872A200920F4A /* APESuperHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C46CA41FC872A200920F4A /* APESuperHUD.framework */; };
 		41C46CA11FC872A200920F4A /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C46CA51FC872A200920F4A /* PromiseKit.framework */; };
@@ -69,6 +77,14 @@
 		410036E41FC86D84008DA73B /* APIPARSE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPARSE.swift; sourceTree = "<group>"; };
 		415771F51FCADE2600E44755 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		415771F61FCADE2600E44755 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		415771F81FCB5A0B00E44755 /* ISHomeMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISHomeMusicViewController.swift; sourceTree = "<group>"; };
+		415771FA1FCB5AF300E44755 /* MTVTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTVTableViewController.swift; sourceTree = "<group>"; };
+		415771FC1FCB5AFC00E44755 /* MTVUKTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTVUKTableViewController.swift; sourceTree = "<group>"; };
+		415771FE1FCB616700E44755 /* ISHomeTechnologyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISHomeTechnologyViewController.swift; sourceTree = "<group>"; };
+		415772001FCB627B00E44755 /* TECHTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TECHTableViewController.swift; sourceTree = "<group>"; };
+		415772021FCB629300E44755 /* CRYPTOCOINSTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRYPTOCOINSTableViewController.swift; sourceTree = "<group>"; };
+		415772041FCB62AC00E44755 /* ENGADGETTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENGADGETTableViewController.swift; sourceTree = "<group>"; };
+		415772061FCB62C200E44755 /* HACKERNEWSTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HACKERNEWSTableViewController.swift; sourceTree = "<group>"; };
 		41C46CA31FC872A200920F4A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C46CA41FC872A200920F4A /* APESuperHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APESuperHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C46CA51FC872A200920F4A /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +139,8 @@
 			children = (
 				410036CC1FC864F5008DA73B /* OBJC-TAB */,
 				410036BC1FC8649E008DA73B /* ISHomeViewController.swift */,
+				415771F81FCB5A0B00E44755 /* ISHomeMusicViewController.swift */,
+				415771FE1FCB616700E44755 /* ISHomeTechnologyViewController.swift */,
 				410036E11FC86B47008DA73B /* API */,
 				41C46CAF1FC8BC0C00920F4A /* VC */,
 				41C46CB01FC8BC1D00920F4A /* XIB_TEMPLATE */,
@@ -168,6 +186,12 @@
 			isa = PBXGroup;
 			children = (
 				41C46CAD1FC8BB6900920F4A /* WebViewController.swift */,
+				415771FA1FCB5AF300E44755 /* MTVTableViewController.swift */,
+				415772061FCB62C200E44755 /* HACKERNEWSTableViewController.swift */,
+				415772021FCB629300E44755 /* CRYPTOCOINSTableViewController.swift */,
+				415772041FCB62AC00E44755 /* ENGADGETTableViewController.swift */,
+				415772001FCB627B00E44755 /* TECHTableViewController.swift */,
+				415771FC1FCB5AFC00E44755 /* MTVUKTableViewController.swift */,
 				410036DB1FC86727008DA73B /* LEQUIPETableViewController.swift */,
 				410036DD1FC86730008DA73B /* TALKSPORTTableViewController.swift */,
 				410036D71FC8670D008DA73B /* MARCATableViewController.swift */,
@@ -350,21 +374,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				415772071FCB62C200E44755 /* HACKERNEWSTableViewController.swift in Sources */,
 				410036CB1FC864E6008DA73B /* CarbonTabSwipeNavigation.m in Sources */,
+				415771FB1FCB5AF300E44755 /* MTVTableViewController.swift in Sources */,
 				410036D21FC866E6008DA73B /* NFLNEWSTableViewController.swift in Sources */,
+				415771F91FCB5A0B00E44755 /* ISHomeMusicViewController.swift in Sources */,
 				410036DA1FC8671C008DA73B /* FOOTBALITALIATableViewController.swift in Sources */,
 				410036E31FC86B60008DA73B /* APIMODELDATA.swift in Sources */,
 				410036BD1FC8649E008DA73B /* ISHomeViewController.swift in Sources */,
+				415771FF1FCB616700E44755 /* ISHomeTechnologyViewController.swift in Sources */,
 				410036CA1FC864E6008DA73B /* CarbonTabSwipeSegmentedControl.m in Sources */,
+				415772051FCB62AC00E44755 /* ENGADGETTableViewController.swift in Sources */,
 				410036AB1FC854C6008DA73B /* AppDelegate.swift in Sources */,
 				415771F71FCADE2600E44755 /* SWRevealViewController.m in Sources */,
+				415772031FCB629300E44755 /* CRYPTOCOINSTableViewController.swift in Sources */,
 				410036E51FC86D84008DA73B /* APIPARSE.swift in Sources */,
 				410036DE1FC86730008DA73B /* TALKSPORTTableViewController.swift in Sources */,
+				415771FD1FCB5AFC00E44755 /* MTVUKTableViewController.swift in Sources */,
 				410036CE1FC86693008DA73B /* ESPNTableViewController.swift in Sources */,
 				410036D41FC866F3008DA73B /* NHLNEWSTableViewController.swift in Sources */,
 				410036C81FC864E6008DA73B /* CarbonSwipeRefresh.m in Sources */,
 				410036C91FC864E6008DA73B /* CarbonTabSwipeScrollView.m in Sources */,
 				410036D81FC8670D008DA73B /* MARCATableViewController.swift in Sources */,
+				415772011FCB627B00E44755 /* TECHTableViewController.swift in Sources */,
 				41C46CAE1FC8BB6900920F4A /* WebViewController.swift in Sources */,
 				410036E01FC86977008DA73B /* APIUTILS.swift in Sources */,
 				410036DC1FC86727008DA73B /* LEQUIPETableViewController.swift in Sources */,

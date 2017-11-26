@@ -35,6 +35,13 @@ struct LLamadas {
     let BASE_BLACHER_NEWS = "bleacher-report"
     let BASE_FOOTBAL_ITALIA = "football-italia"
     let BASE_TALK_NEWS = "talksport"
+    let BASE_MTV = "mtv-news"
+    let BASE_MTV_UK = "mtv-news-uk"
+    let BASE_TECHRUNCH = "techcrunch"
+    let BASE_ENGADGET = "engadget"
+    let BASE_HACKER_NEWS = "hacker-news"
+    let BASE_CRIPTO_COINS = "crypto-coins-news"
+    
     
     let BASE_PARAMETR = "&apiKey="
     
