@@ -21,6 +21,11 @@ class ISHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let viewAux = UIView(frame: CGRect(x: 0, y: -20, width: UIScreen.main.bounds.size.width, height: 60))
+        viewAux.backgroundColor = CONSTANTES.COLORES.AZUL_STATUS_BAR
+        viewAux.alpha = 0.4
+        self.navigationController?.view.addSubview(viewAux)
+        
         items = ["ESPN", "NFL News", "NHL News", "Bleacher Report", "Marca", "Football Italia", "l'equipe", "TalkSport"]
         customTabSwipeNavigation = CarbonTabSwipeNavigation(items: (items as! [Any]), delegate: self)
         customTabSwipeNavigation.insert(intoRootViewController: self)
