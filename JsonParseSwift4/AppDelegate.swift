@@ -43,6 +43,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func personalizaUI(){
+        
+        /*let viewAux = UIView(frame: CGRect(x: 0, y: -20, width: UIScreen.main.bounds.size.width, height: 60))
+        viewAux.backgroundColor = CONSTANTES.COLORES.AZUL_STATUS_BAR
+        viewAux.alpha = 0.5
+        self.window?.rootViewController?.view.addSubview(viewAux)*/
+        
+        
+        
         let navBar = UINavigationBar.appearance()
         navBar.barTintColor = CONSTANTES.COLORES.AZUL_BARRA_NAV
         navBar.tintColor = CONSTANTES.COLORES.BLANCO_TEXTO_NAV

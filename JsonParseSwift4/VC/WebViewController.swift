@@ -24,6 +24,11 @@ class WebViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let viewAux = UIView(frame: CGRect(x: 0, y: -20, width: UIScreen.main.bounds.size.width, height: 60))
+        viewAux.backgroundColor = CONSTANTES.COLORES.AZUL_STATUS_BAR
+        //viewAux.alpha = 0.5
+        self.view.addSubview(viewAux)
 
         //Mostrar activity inicialmente
         myActivityIndicator.isHidden = false
