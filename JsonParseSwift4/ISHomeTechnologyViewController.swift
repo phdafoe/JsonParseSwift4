@@ -21,6 +21,8 @@ class ISHomeTechnologyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dameStatusBar(self.navigationController!)
+        
         items = ["Hacker News", "Engadget", "Cripto Coins News", "Techcrunch"]
         customTabSwipeNavigation = CarbonTabSwipeNavigation(items: (items as! [Any]), delegate: self)
         customTabSwipeNavigation.insert(intoRootViewController: self)
