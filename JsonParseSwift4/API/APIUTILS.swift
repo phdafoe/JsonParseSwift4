@@ -49,16 +49,7 @@ struct LLamadas {
     let BASE_API_URL = "https://newsapi.org/v2/top-headlines?sources="
 }
 
-/**
-- important: NULL TO STRING
-- name of Function ->  metodo dimeString
-- politicas de nulos desde un web service
- - parameters:
-    - j -> JSON
-    - nombre -> nombre clave del JSON
- - returns:
-    - String -> como objeto de retorno / comprobando si es nulo o no (sentencia "if let")
- */
+//MARK: - NULL TO STRING
 public func dimeString(_ j : JSON, nombre : String) -> String{
     if let stringResult = j[nombre].string{
         return stringResult
@@ -66,7 +57,6 @@ public func dimeString(_ j : JSON, nombre : String) -> String{
         return ""
     }
 }
-
 
 func muestraAlertVC(_ titleData : String, messageData : String) -> UIAlertController{
     let alert = UIAlertController(title: titleData, message: messageData, preferredStyle: .alert)
@@ -80,14 +70,6 @@ public func dameFecha(_ fecha : String) -> Date?{
     dateFormatter.dateFormat = "EEE, dd MMM"
     dateFormatter.locale = Locale(identifier: "es_ES")
     return dateFormatter.date(from: fecha)
-}
-
-
-public func dameStatusBar(_ viewController : UIViewController){
-    let viewAux = UIView(frame: CGRect(x: 0, y: -20, width: UIScreen.main.bounds.size.width, height: 60))
-    viewAux.backgroundColor = CONSTANTES.COLORES.AZUL_STATUS_BAR
-    viewAux.alpha = 0.4
-    viewController.view.addSubview(viewAux)
 }
 
 

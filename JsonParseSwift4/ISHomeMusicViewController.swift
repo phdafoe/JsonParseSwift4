@@ -20,7 +20,6 @@ class ISHomeMusicViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dameStatusBar(self.navigationController!)
         
         items = ["MTV News", "MTV News(UK)"]
         customTabSwipeNavigation = CarbonTabSwipeNavigation(items: (items as! [Any]), delegate: self)

@@ -82,29 +82,25 @@ class FOOTBALITALIATableViewController: UITableViewController {
     //MARK: - UTILS
     func llamada(){
         
-        //let datosModel = ParserGeneral()
+        let datosModel = ParserGeneral()
         let idFuente = CONSTANTES.LLAMADAS.BASE_FOOTBAL_ITALIA
-//
-//        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
-//
-//        firstly{
-//            return when(resolved: datosModel.getDatosFromWeb(idFuente))
-//            }.then{_ in
-//                self.arrayModel = datosModel.setParseFromWeb()
-//            }.then{_ in
-//                self.tableView.reloadData()
-//            }.then{_ in
-//                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
-//            }.catch{error in
-//                self.present(muestraAlertVC("Lo sentimos",
-//                                            messageData: "Algo salió mal"),
-//                             animated: true,
-//                             completion: nil)
-//        }
+        
         APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
-        arrayModel = APIFacadeManager().getDatosFromWeb(idFuente)
-        self.tableView.reloadData()
-        APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+        
+        firstly{
+            return when(resolved: datosModel.getDatosFromWeb(idFuente))
+            }.then{_ in
+                self.arrayModel = datosModel.setParseFromWeb()
+            }.then{_ in
+                self.tableView.reloadData()
+            }.then{_ in
+                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+            }.catch{error in
+                self.present(muestraAlertVC("Lo sentimos",
+                                            messageData: "Algo salió mal"),
+                             animated: true,
+                             completion: nil)
+        }
     }
 
 }

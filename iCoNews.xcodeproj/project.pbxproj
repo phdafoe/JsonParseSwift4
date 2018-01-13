@@ -26,7 +26,6 @@
 		410036E01FC86977008DA73B /* APIUTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410036DF1FC86976008DA73B /* APIUTILS.swift */; };
 		410036E31FC86B60008DA73B /* APIMODELDATA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410036E21FC86B60008DA73B /* APIMODELDATA.swift */; };
 		410036E51FC86D84008DA73B /* APIPARSE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410036E41FC86D84008DA73B /* APIPARSE.swift */; };
-		41039108200A4FA900642901 /* APIFACADE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41039107200A4FA900642901 /* APIFACADE.swift */; };
 		415771F71FCADE2600E44755 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415771F61FCADE2600E44755 /* SWRevealViewController.m */; };
 		415771F91FCB5A0B00E44755 /* ISHomeMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415771F81FCB5A0B00E44755 /* ISHomeMusicViewController.swift */; };
 		415771FB1FCB5AF300E44755 /* MTVTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415771FA1FCB5AF300E44755 /* MTVTableViewController.swift */; };
@@ -76,7 +75,6 @@
 		410036DF1FC86976008DA73B /* APIUTILS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUTILS.swift; sourceTree = "<group>"; };
 		410036E21FC86B60008DA73B /* APIMODELDATA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMODELDATA.swift; sourceTree = "<group>"; };
 		410036E41FC86D84008DA73B /* APIPARSE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPARSE.swift; sourceTree = "<group>"; };
-		41039107200A4FA900642901 /* APIFACADE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFACADE.swift; sourceTree = "<group>"; };
 		415771F51FCADE2600E44755 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		415771F61FCADE2600E44755 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		415771F81FCB5A0B00E44755 /* ISHomeMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISHomeMusicViewController.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 				410036DF1FC86976008DA73B /* APIUTILS.swift */,
 				410036E21FC86B60008DA73B /* APIMODELDATA.swift */,
 				410036E41FC86D84008DA73B /* APIPARSE.swift */,
-				41039107200A4FA900642901 /* APIFACADE.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -399,7 +396,6 @@
 				410036C81FC864E6008DA73B /* CarbonSwipeRefresh.m in Sources */,
 				410036C91FC864E6008DA73B /* CarbonTabSwipeScrollView.m in Sources */,
 				410036D81FC8670D008DA73B /* MARCATableViewController.swift in Sources */,
-				41039108200A4FA900642901 /* APIFACADE.swift in Sources */,
 				415772011FCB627B00E44755 /* TECHTableViewController.swift in Sources */,
 				41C46CAE1FC8BB6900920F4A /* WebViewController.swift in Sources */,
 				410036E01FC86977008DA73B /* APIUTILS.swift in Sources */,

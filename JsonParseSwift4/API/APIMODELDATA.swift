@@ -10,9 +10,11 @@ import Foundation
 
 class ModelGeneralData : NSObject {
     
+    //let status : String
     let articles : Articles
     
     init(pArticles : Articles) {
+        //self.status = pStatus
         self.articles = pArticles
         super.init()
     }
