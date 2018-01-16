@@ -8,6 +8,8 @@
 
 import Foundation
 import SwiftyJSON
+import PromiseKit
+import APESuperHUD
 
 let CONSTANTES = Constantes()
 
@@ -50,7 +52,7 @@ struct LLamadas {
 }
 
 //MARK: - NULL TO STRING
-public func dimeString(_ j : JSON, nombre : String) -> String{
+func dimeString(_ j : JSON, nombre : String) -> String{
     if let stringResult = j[nombre].string{
         return stringResult
     }else{
@@ -65,11 +67,37 @@ func muestraAlertVC(_ titleData : String, messageData : String) -> UIAlertContro
     return alert
 }
 
-public func dameFecha(_ fecha : String) -> Date?{
+func dameFecha(_ fecha : String) -> Date?{
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "EEE, dd MMM"
     dateFormatter.locale = Locale(identifier: "es_ES")
     return dateFormatter.date(from: fecha)
+}
+
+
+func llamada(_ arrayData : [ModelGeneralData], idFuente : String, parserGeneral : ParserGeneral, viewController : UIView ){
+    
+    APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard,
+                                message: "Cargando",
+                                presentingView: viewController)
+    
+    firstly{
+        return when(resolved: parserGeneral.getDatosFromWeb(idFuente))
+        }.then{_ in
+            arrayData = parserGeneral.setParseFromWeb()
+        }.then{_ in
+            viewController.reloadData()
+        }.then{_ in
+            APESuperHUD.removeHUD(animated: true,
+                                  presentingView: viewController,
+                                  completion: nil)
+            
+        }.catch{error in
+            viewController.present(muestraAlertVC("Lo sentimos",
+                                        messageData: "Algo salió mal"),
+                         animated: true,
+                         completion: nil)
+    }
 }
 
 
